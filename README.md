@@ -6,6 +6,9 @@
 * rabbitmq-demo
 * redis-demo
 * mysql-demo
+* mybatis-demo
+* mybatis-plus-demo
+* security-basic-demo
 
 # 项目介绍
 ### rabbitmq-demo
