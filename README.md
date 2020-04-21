@@ -18,4 +18,13 @@
 利用了 SpringBoot 的自动化数据源配置，默认创建 Hikari 连接池。使用 Spring 对数据库的支持实现了三个从数据库读取数据的示例：
 1. spring-jdbc：Spring 对 Jdbc API 的封装，使用 JdbcTemplate 实现访问数据库的操作
 2. spring-data-jdbc：Spring 对 ORM 的一个轻量级实现，能快速实现对数据库单表的 CRUD 操作
-3. spring-data-jpa：其实就是集成了 Hibernate ，基于 JPA 实现的 ORM 框架  
+3. spring-data-jpa：其实就是集成了 Hibernate ，基于 JPA 实现的 ORM 框架
+
+### mybatis-demo
+mybatis 简单使用示例，实际开发中对应表的 mapper 文件，Mapper 接口，持久化对象都可以使用 mybatis-generator 生成。
+
+### mybatis-plus-demo
+mybatis-plus 简单使用示例，包括简单查询，分页查询，mybatis-plus 提供了单表基础操作模板，可以为开发省去大量代码，如果后续有更深度的使用，会在此项目更新一些更高级的用法
+
+### security-basic-demo
+spring security 使用示例，默认使用 Basic 认证，此项目也是使用 Basic 认证的示例，由于 Basic 认证用户名跟密码都是明文传输，所以并不安全，因此不建议在实际 web 项目中使用。
