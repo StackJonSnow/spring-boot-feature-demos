@@ -9,6 +9,7 @@
 * mybatis-demo
 * mybatis-plus-demo
 * security-basic-demo
+* kafka-demo
 
 # 项目介绍
 ### rabbitmq-demo
@@ -31,3 +32,6 @@ mybatis-plus 简单使用示例，包括简单查询，分页查询，mybatis-pl
 
 ### security-basic-demo
 spring security 使用示例，默认使用 Basic 认证，此项目也是使用 Basic 认证的示例，由于 Basic 认证用户名跟密码都是明文传输，所以并不安全，因此不建议在实际 web 项目中使用。
+
+### kafka-demo
+使用 Spring 提供的 kafka API 实现的一个 kafka 消息生产与消费的简单 demo，后续若有深度使用，会更新此项目。
