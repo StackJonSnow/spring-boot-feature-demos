@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      master:
+        url: jdbc:mysql://localhost:3306/master
+        username: root
+        password: mysql@2020
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        #连接池初始大小
+        initial-size: 50
+        #最大连接数量
+        max-active: 100
+        #最小连接数量
+        min-idle: 50
+        #获取连接最大等待时长，单位：ms
+        max-wait: 1000
+        #检测连接执行的sql
+        validation-query: select 1
+        web-stat-filter:
+          enabled: true
+        stat-view-servlet:
+          enabled: true
+      slave:
+        url: jdbc:mysql://localhost:3306/slave
+        username: root
+        password: mysql@2020
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        initial-size: 50
+        max-active: 100
+        min-idle: 50
+        max-wait: 1000
+        validation-query: select 1
+        web-stat-filter:
+          enabled: true
+        stat-view-servlet:
+          enabled: true

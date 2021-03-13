@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <appender name="KafkaAppender" class="com.example.kafka.log.KafkaAppender">
+        <topic>log</topic>
+        <kafkaProducerProperties>
+            bootstrap.servers=localhost:9092
+            retries=0
+            value.serializer=org.apache.kafka.common.serialization.StringSerializer
+            key.serializer=org.apache.kafka.common.serialization.StringSerializer
+            producer.type=async
+            request.required.acks=0
+            max.block.ms=100
+            <!--reconnect.backoff.ms=1-->
+            <!--acks=0-->
+            <!--producer.type=async -->
+            <!--request.required.acks=1 -->
+            <!--queue.buffering.max.ms=20000 -->
+            <!--queue.buffering.max.messages=1000-->
+            <!--queue.enqueue.timeout.ms = -1 -->
+            <!--batch.num.messages=8-->
+            <!--metadata.fetch.timeout.ms=3000-->
+            <!--producer.type=sync-->
+            <!--request.required.acks=1-->
+            <!--reconnect.backoff.ms=3000-->
+            <!--retry.backoff.ms=3000-->
+        </kafkaProducerProperties>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <logger name="com.example.kafka" level="DEBUG"/>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="KafkaAppender"></appender-ref>
+    </root>
+</configuration>

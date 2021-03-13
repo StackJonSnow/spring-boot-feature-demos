@@ -1,0 +1,11 @@
+spring:
+  master-datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/master
+    username: root
+    password: mysql@2020
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  slave-datasource:
+    jdbc-url: jdbc:mysql://localhost:3306/slave
+    username: root
+    password: mysql@2020
+    driver-class-name: com.mysql.cj.jdbc.Driver
