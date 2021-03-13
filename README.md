@@ -10,6 +10,10 @@
 * mybatis-plus-demo
 * security-basic-demo
 * kafka-demo
+* dynamic-datasource-demo
+* dynamic-druid-datasource-demo
+* sharding-jdbc-demo
+* websocket-demo
 
 # 项目介绍
 ### rabbitmq-demo
@@ -30,8 +34,20 @@ mybatis 简单使用示例，实际开发中对应表的 mapper 文件，Mapper 
 ### mybatis-plus-demo
 mybatis-plus 简单使用示例，包括简单查询，分页查询，mybatis-plus 提供了单表基础操作模板，可以为开发省去大量代码，如果后续有更深度的使用，会在此项目更新一些更高级的用法
 
-### security-basic-demo
-spring security 使用示例，默认使用 Basic 认证，此项目也是使用 Basic 认证的示例，由于 Basic 认证用户名跟密码都是明文传输，所以并不安全，因此不建议在实际 web 项目中使用。
+### security-demo
+spring security 使用示例，实现角色权限控制
 
 ### kafka-demo
 使用 Spring 提供的 kafka API 实现的一个 kafka 消息生产与消费的简单 demo，后续若有深度使用，会更新此项目。
+
+### dynamic-datasource-demo
+动态数据源方案实现(比如实现数据库的读写[主从]分离)，基于 spring 切面，继承 AbstractRoutingDataSource 实现数据源选择，分别实现了根据方法名称自动切换数据源与根据注解实现切换数据源
+
+### dynamic-druid-datasource-demo
+实现原理同上，数据源换成 druid（为监控而生，但是好像生产环境很少使用它的监控功能）
+
+### sharding-jdbc-demo
+使用 sharding-jdbc 实现数据库读写分离
+
+### websocket-demo
+实现的一个 web-socket 客户端，能实现跟服务端简单通信，后续会深入学习 netty，会给出一个简单的 im 系统实例(包含客户端与服务端)
